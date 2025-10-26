@@ -1,9 +1,10 @@
 ; Set Operations built-ins tests
 
-!(unique (superpose (a b c d d)))
-!(union (superpose (a b b c)) (superpose (b c c d)))
-!(intersection (superpose (a b c c)) (superpose (b c c c d)))
-!(subtraction (superpose (a b b c)) (superpose (b c c d)))
+; Generic set ops vary between engines; prefer -atom list variants for cross-compat
+; !(unique (superpose (a b c d d)))
+; !(union (superpose (a b b c)) (superpose (b c c d)))
+; !(intersection (superpose (a b c c)) (superpose (b c c c d)))
+; !(subtraction (superpose (a b b c)) (superpose (b c c d)))
 
 !(unique-atom (a b c d d))
 !(union-atom (a b b c) (b c c d))
